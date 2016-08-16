@@ -1,0 +1,6 @@
+
+POST    /token/registration             uk.gov.hmrc.mobiletokenexchange.controllers.MobileTokenExchangeController.register(journeyId: Option[String])
+
+GET     /token/registration/:deviceId   uk.gov.hmrc.mobiletokenexchange.controllers.MobileTokenExchangeController.find(deviceId:String, journeyId: Option[String])
+
+POST    /token/registration/update      uk.gov.hmrc.mobiletokenexchange.controllers.MobileTokenExchangeController.updateRefreshToken(journeyId: Option[String])
