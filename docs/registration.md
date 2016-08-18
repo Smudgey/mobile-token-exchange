@@ -1,6 +1,6 @@
 registration
 ----
-  Register an API Gateway refresh-token against a users unique DeviceId. The service will either create a new record and update an existing record based on the deviceId.
+  Register an API Gateway refresh-token against a users unique DeviceId. The service will either create a new record or update an existing record based on the deviceId.
   
 * **URL**
 

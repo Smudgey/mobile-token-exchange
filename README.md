@@ -11,7 +11,7 @@ The micro-service is responsible for storing a users refresh-token in mongo usin
 | Path                               | Supported Methods | Description  |
 | -----------------------------------| ------------------| ------------|
 |```/token/registration ```          | POST              | Create or update an existing record with a users refresh-token. [More...](docs/registration.md) |
-|```/token/registration/:deviceId``` | GET               | Find a existing record by deviceId. [More...](docs/registration.md) [More...](docs/find.md) |
+|```/token/registration/:deviceId``` | GET               | Find a existing record by deviceId. [More...](docs/find.md) |
 |```/token/registration/update```    | POST              | Update an existing record with a new refresh-token. [More...](docs/update.md) ||
 
 
