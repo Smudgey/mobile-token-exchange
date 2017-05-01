@@ -1,36 +1,27 @@
 import sbt._
-import uk.gov.hmrc.SbtAutoBuildPlugin
-import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin
-import uk.gov.hmrc.versioning.SbtGitVersioning
 
 
 object MicroServiceBuild extends Build with MicroService {
-
-  import play.PlayImport.PlayKeys._
+  import play.sbt.routes.RoutesKeys._
 
   val appName = "mobile-token-exchange"
 
-  override lazy val plugins: Seq[Plugins] = Seq(
-    SbtAutoBuildPlugin, SbtGitVersioning, SbtDistributablesPlugin
-  )
-
   override lazy val appDependencies: Seq[ModuleID] = AppDependencies()
-  override lazy val playSettings : Seq[Setting[_]] = Seq(routesImport ++= Seq())
 }
 
 private object AppDependencies {
-  import play.PlayImport._
+  import play.sbt.PlayImport._
   import play.core.PlayVersion
 
   private val wireMockVersion = "1.57"
   private val scalaJVersion = "1.1.5"
-  private val scalaTestVersion = "2.2.6"
+  private val scalaTestVersion = "3.0.1"
 
   private val microserviceBootstrapVersion = "5.15.0"
-  private val playHealthVersion = "1.1.0"
-  private val playJsonLoggerVersion = "2.1.1"
-  private val playConfigVersion = "2.0.1"
-  private val hmrcTestVersion = "1.6.0"
+  private val playHealthVersion = "2.1.0"
+  private val playJsonLoggerVersion = "3.1.0"
+  private val playConfigVersion = "4.3.0"
+  private val hmrcTestVersion = "2.3.0"
 
   val compile = Seq(
     ws,
@@ -38,7 +29,7 @@ private object AppDependencies {
     "uk.gov.hmrc" %% "play-health" % playHealthVersion,
     "uk.gov.hmrc" %% "play-config" % playConfigVersion,
     "uk.gov.hmrc" %% "play-json-logger" % playJsonLoggerVersion,
-    "uk.gov.hmrc" %% "play-reactivemongo" % "4.8.0"
+    "uk.gov.hmrc" %% "play-reactivemongo" % "5.2.0"
   )
 
   trait TestDependencies {
