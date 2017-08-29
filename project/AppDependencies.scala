@@ -1,17 +1,8 @@
 import sbt._
 
-
-object MicroServiceBuild extends Build with MicroService {
-  import play.sbt.routes.RoutesKeys._
-
-  val appName = "mobile-token-exchange"
-
-  override lazy val appDependencies: Seq[ModuleID] = AppDependencies()
-}
-
-private object AppDependencies {
-  import play.sbt.PlayImport._
+object AppDependencies {
   import play.core.PlayVersion
+  import play.sbt.PlayImport._
 
   private val wireMockVersion = "1.57"
   private val scalaJVersion = "1.1.5"
