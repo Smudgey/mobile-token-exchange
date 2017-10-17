@@ -12,7 +12,7 @@ object AppDependencies {
   val compile = Seq(
     ws,
     "uk.gov.hmrc" %% "microservice-bootstrap" % microserviceBootstrapVersion,
-    "uk.gov.hmrc" %% "play-reactivemongo" % "5.2.0"
+    "uk.gov.hmrc" %% "play-reactivemongo" % "6.1.0"
   )
 
   trait TestDependencies {
@@ -26,7 +26,7 @@ object AppDependencies {
         "uk.gov.hmrc" %% "hmrctest" % hmrctestVersion % "test,it",
         "org.scalaj" %% "scalaj-http" % scalaJVersion % "test,it",
         "com.typesafe.play" %% "play-test" % PlayVersion.current % "test,it",
-        "uk.gov.hmrc" %% "reactivemongo-test" % "2.0.0" % scope
+        "uk.gov.hmrc" %% "reactivemongo-test" % "3.0.0" % scope
       )
     }.test
   }
