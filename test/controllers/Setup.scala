@@ -22,14 +22,14 @@ import play.api.libs.json.{JsValue, Json}
 import play.api.test.FakeRequest
 import play.api.test.Helpers._
 import reactivemongo.bson.BSONObjectID
-import uk.gov.hmrc.mobiletokenexchange.domain.{UpdateRefreshToken, TokenRegistration}
-import uk.gov.hmrc.mobiletokenexchange.repository.{TokenPersist, TokenRepository}
-import uk.gov.hmrc.mobiletokenexchange.services.{TokenService, LiveTokenService}
-import uk.gov.hmrc.mongo.{DatabaseUpdate, Saved, Updated}
-import uk.gov.hmrc.play.audit.http.connector.{AuditConnector, AuditResult}
-import uk.gov.hmrc.play.http.HeaderCarrier
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.mobiletokenexchange.config.MicroserviceAuditConnector
 import uk.gov.hmrc.mobiletokenexchange.controllers.MobileTokenExchangeController
+import uk.gov.hmrc.mobiletokenexchange.domain.{TokenRegistration, UpdateRefreshToken}
+import uk.gov.hmrc.mobiletokenexchange.repository.{TokenPersist, TokenRepository}
+import uk.gov.hmrc.mobiletokenexchange.services.{LiveTokenService, TokenService}
+import uk.gov.hmrc.mongo.{DatabaseUpdate, Saved, Updated}
+import uk.gov.hmrc.play.audit.http.connector.{AuditConnector, AuditResult}
 
 import scala.concurrent.{ExecutionContext, Future}
 

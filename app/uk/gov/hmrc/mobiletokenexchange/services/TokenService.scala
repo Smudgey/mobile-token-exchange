@@ -16,12 +16,12 @@
 
 package uk.gov.hmrc.mobiletokenexchange.services
 
-import uk.gov.hmrc.mongo.{DatabaseUpdate, Updated, Saved}
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.mobiletokenexchange.config.MicroserviceAuditConnector
 import uk.gov.hmrc.mobiletokenexchange.domain._
-import uk.gov.hmrc.play.audit.http.connector.AuditConnector
-import uk.gov.hmrc.play.http.HeaderCarrier
 import uk.gov.hmrc.mobiletokenexchange.repository.{TokenPersist, TokenRepository}
+import uk.gov.hmrc.mongo.{DatabaseUpdate, Saved, Updated}
+import uk.gov.hmrc.play.audit.http.connector.AuditConnector
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

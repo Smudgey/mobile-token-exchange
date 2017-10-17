@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.mobiletokenexchange.controllers
 
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.microservice.controller.BaseController
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -24,7 +25,6 @@ trait ErrorHandling {
   self:BaseController =>
 
   import play.api.{Logger, mvc}
-  import uk.gov.hmrc.play.http.HeaderCarrier
 
   implicit val ec : ExecutionContext
 

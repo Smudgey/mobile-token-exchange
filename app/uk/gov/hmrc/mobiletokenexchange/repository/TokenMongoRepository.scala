@@ -21,7 +21,7 @@ import play.modules.reactivemongo.MongoDbConnection
 import reactivemongo.api.DB
 import reactivemongo.api.indexes.{Index, IndexType}
 import reactivemongo.bson._
-import uk.gov.hmrc.mobiletokenexchange.domain.{UpdateRefreshToken, TokenRegistration}
+import uk.gov.hmrc.mobiletokenexchange.domain.{TokenRegistration, UpdateRefreshToken}
 import uk.gov.hmrc.mongo.json.ReactiveMongoFormats
 import uk.gov.hmrc.mongo.{AtomicUpdate, BSONBuilderHelpers, DatabaseUpdate, ReactiveRepository}
 import uk.gov.hmrc.time.DateTimeUtils
